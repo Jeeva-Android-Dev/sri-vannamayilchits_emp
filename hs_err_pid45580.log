@@ -1,0 +1,199 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 130023424 bytes for Failed to commit area from 0x00000000a0000000 to 0x00000000a7c00000 of length 130023424.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3619), pid=45580, tid=38572
+#
+# JRE version:  (11.0.13) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.13+0-b1751.21-8125866, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Djava.awt.headless=true -Djava.rmi.server.hostname=127.0.0.1 -Xmx1536m -Dkotlin.environment.keepalive org.jetbrains.kotlin.daemon.KotlinCompileDaemon --daemon-runFilesPath C:\Users\Mazenet-Mounika\AppData\Local\kotlin\daemon --daemon-autoshutdownIdleSeconds=7200 --daemon-compilerClasspath C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-compiler-embeddable\1.3.21\677cc9553b8964c895abc76da9b6a0faea8f671d\kotlin-compiler-embeddable-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-reflect\1.3.21\d0d5ff2ac2ebd8a42697af41e20fc225a23c5d3b\kotlin-reflect-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.3.21\4bcc2012b84840e19e1e28074284cac908be0295\kotlin-stdlib-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-script-runtime\1.3.21\29363d474ee6fda354900636320a177c7286def9\kotlin-script-runtime-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.intellij.deps\trove4j\1.0.20181211\216c2e14b070f334479d800987affe4054cd563f\trove4j-1.0.20181211.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-common\1.3.21\f30e4a9897913e53d778f564110bafa1fef46643\kotlin-stdlib-common-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar
+
+Host: 11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz, 4 cores, 7G,  Windows 11 , 64 bit Build 22621 (10.0.22621.3374)
+Time: Thu Apr 25 11:51:21 2024 India Standard Time elapsed time: 0.012385 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001e52c475000):  JavaThread "Unknown thread" [_thread_in_vm, id=38572, stack(0x000000af73200000,0x000000af73300000)]
+
+Stack: [0x000000af73200000,0x000000af73300000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6100fa]
+V  [jvm.dll+0x747090]
+V  [jvm.dll+0x7486ad]
+V  [jvm.dll+0x748d83]
+V  [jvm.dll+0x24ab48]
+V  [jvm.dll+0x60d164]
+V  [jvm.dll+0x601e75]
+V  [jvm.dll+0x308bdb]
+V  [jvm.dll+0x308b4a]
+V  [jvm.dll+0x308a22]
+V  [jvm.dll+0x30d986]
+V  [jvm.dll+0x357093]
+V  [jvm.dll+0x357796]
+V  [jvm.dll+0x357193]
+V  [jvm.dll+0x2e3448]
+V  [jvm.dll+0x2e45f7]
+V  [jvm.dll+0x7242e7]
+V  [jvm.dll+0x725adc]
+V  [jvm.dll+0x364629]
+V  [jvm.dll+0x707cee]
+V  [jvm.dll+0x3d2633]
+V  [jvm.dll+0x3d4a21]
+C  [jli.dll+0x536b]
+C  [ucrtbase.dll+0x29333]
+C  [KERNEL32.DLL+0x1257d]
+C  [ntdll.dll+0x5aa48]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001e52a1d5340, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001e52c48a800 GCTaskThread "GC Thread#0" [stack: 0x000000af73300000,0x000000af73400000] [id=12912]
+  0x000001e52c4b0000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000af73400000,0x000000af73500000] [id=20224]
+  0x000001e52c4b1000 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000af73500000,0x000000af73600000] [id=24220]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe22ad3dd7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001e52c4711f0] Heap_lock - owner thread: 0x000001e52c475000
+
+Heap address: 0x00000000a0000000, size: 1536 MB, Compressed Oops mode: Non-zero based: 0x00000000a0000000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.006 Loaded shared library C:\Program Files\Android\Android Studio\jre\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff6277f0000 - 0x00007ff6277fa000 	C:\Program Files\Android\Android Studio\jre\bin\java.exe
+0x00007ffe6de90000 - 0x00007ffe6e0a6000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffe6bc10000 - 0x00007ffe6bcd4000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffe6b3a0000 - 0x00007ffe6b747000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffe6b810000 - 0x00007ffe6b921000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffe48370000 - 0x00007ffe48389000 	C:\Program Files\Android\Android Studio\jre\bin\jli.dll
+0x00007ffe6d0b0000 - 0x00007ffe6d25e000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffe43990000 - 0x00007ffe439a7000 	C:\Program Files\Android\Android Studio\jre\bin\VCRUNTIME140.dll
+0x00007ffe6ba00000 - 0x00007ffe6ba26000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffe6bbc0000 - 0x00007ffe6bbe9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffe6baa0000 - 0x00007ffe6bbb9000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffe6b930000 - 0x00007ffe6b9ca000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffe48610000 - 0x00007ffe488a3000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3235_none_270f74e173860f98\COMCTL32.dll
+0x00007ffe6c160000 - 0x00007ffe6c207000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffe6da20000 - 0x00007ffe6da51000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffe2c7b0000 - 0x00007ffe2c84d000 	C:\Program Files\Android\Android Studio\jre\bin\msvcp140.dll
+0x00007ffe227e0000 - 0x00007ffe232e2000 	C:\Program Files\Android\Android Studio\jre\bin\server\jvm.dll
+0x00007ffe6be40000 - 0x00007ffe6bef2000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffe6dda0000 - 0x00007ffe6de48000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffe6b9d0000 - 0x00007ffe6b9f8000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffe6dc20000 - 0x00007ffe6dd35000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffe6d360000 - 0x00007ffe6d368000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffe680a0000 - 0x00007ffe680a9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffe6d9a0000 - 0x00007ffe6da11000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffe5fe90000 - 0x00007ffe5fec4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffe5fe10000 - 0x00007ffe5fe1a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffe6a2e0000 - 0x00007ffe6a2f8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffe5d190000 - 0x00007ffe5d1a1000 	C:\Program Files\Android\Android Studio\jre\bin\verify.dll
+0x00007ffe68a20000 - 0x00007ffe68c53000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffe6d580000 - 0x00007ffe6d908000 	C:\WINDOWS\System32\combase.dll
+0x00007ffe6cfd0000 - 0x00007ffe6d0a7000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffe491c0000 - 0x00007ffe491f2000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffe6b320000 - 0x00007ffe6b399000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffe511b0000 - 0x00007ffe511d9000 	C:\Program Files\Android\Android Studio\jre\bin\java.dll
+0x00007ffe68000000 - 0x00007ffe6800b000 	C:\Program Files\Android\Android Studio\jre\bin\jimage.dll
+0x00007ffe51190000 - 0x00007ffe511a8000 	C:\Program Files\Android\Android Studio\jre\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Android\Android Studio\jre\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3235_none_270f74e173860f98;C:\Program Files\Android\Android Studio\jre\bin\server
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Djava.rmi.server.hostname=127.0.0.1 -Xmx1536m -Dkotlin.environment.keepalive 
+java_command: org.jetbrains.kotlin.daemon.KotlinCompileDaemon --daemon-runFilesPath C:\Users\Mazenet-Mounika\AppData\Local\kotlin\daemon --daemon-autoshutdownIdleSeconds=7200 --daemon-compilerClasspath C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-compiler-embeddable\1.3.21\677cc9553b8964c895abc76da9b6a0faea8f671d\kotlin-compiler-embeddable-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-reflect\1.3.21\d0d5ff2ac2ebd8a42697af41e20fc225a23c5d3b\kotlin-reflect-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.3.21\4bcc2012b84840e19e1e28074284cac908be0295\kotlin-stdlib-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-script-runtime\1.3.21\29363d474ee6fda354900636320a177c7286def9\kotlin-script-runtime-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.intellij.deps\trove4j\1.0.20181211\216c2e14b070f334479d800987affe4054cd563f\trove4j-1.0.20181211.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-common\1.3.21\f30e4a9897913e53d778f564110bafa1fef46643\kotlin-stdlib-common-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar
+java_class_path (initial): C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-compiler-embeddable\1.3.21\677cc9553b8964c895abc76da9b6a0faea8f671d\kotlin-compiler-embeddable-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-reflect\1.3.21\d0d5ff2ac2ebd8a42697af41e20fc225a23c5d3b\kotlin-reflect-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.3.21\4bcc2012b84840e19e1e28074284cac908be0295\kotlin-stdlib-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-script-runtime\1.3.21\29363d474ee6fda354900636320a177c7286def9\kotlin-script-runtime-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.intellij.deps\trove4j\1.0.20181211\216c2e14b070f334479d800987affe4054cd563f\trove4j-1.0.20181211.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-common\1.3.21\f30e4a9897913e53d778f564110bafa1fef46643\kotlin-stdlib-common-1.3.21.jar;C:\Users\Mazenet-Mounika\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 130023424                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1610612736                                {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5830732                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122913754                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122913754                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Microsoft\jdk-17.0.8.7-hotspot\
+PATH=C:\Program Files\Microsoft\jdk-17.0.8.7-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-18.0.2.1\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\bin;C:\srcs\flutter\bin;C:\ProgramData\chocolatey\bin;C:\Users\MazenetAdministrator\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Mazenet-Mounika\AppData\Local\Microsoft\WindowsApps;C:\Users\Mazenet-Mounika\AppData\Local\GitHubDesktop\bin;C:\Users\Mazenet-Mounika\AppData\Local\Programs\Git\cmd;flutter\bin;C:\Users\Mazenet-Mounika\AppData\Roaming\npm;C:\Users\Mazenet-Mounika\AppData\Local\Programs\Microsoft VS Code\bin
+USERNAME=Mazenet-Mounika
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 22621 (10.0.22621.3374)
+OS uptime: 8 days 1:17 hours
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 140 stepping 1 microcode 0xb4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, evex, sha, fma
+
+Memory: 4k page, system-wide physical 7834M (115M free)
+TotalPageFile size 25536M (AvailPageFile size 12M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 51M, peak: 175M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.13+0-b1751.21-8125866) for windows-amd64 JRE (11.0.13+0-b1751.21-8125866), built on Feb  2 2022 03:00:22 by "builder" with MS VC++ 14.0 (VS2015)
+
+END.
